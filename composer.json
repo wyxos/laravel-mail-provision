@@ -1,0 +1,33 @@
+{
+  "name": "wyxos/laravel-mail-provision",
+  "description": "Provision SparkPost sending/tracking domains and Cloudflare DNS records, and optionally configure SparkPost SMTP env settings.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Wyxos\\LaravelMailProvision\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.2|^8.3|^8.4",
+    "illuminate/console": "^11.0|^12.0",
+    "illuminate/http": "^11.0|^12.0",
+    "illuminate/support": "^11.0|^12.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Wyxos\\LaravelMailProvision\\MailProvisionServiceProvider"
+      ]
+    }
+  },
+  "keywords": [
+    "laravel",
+    "sparkpost",
+    "cloudflare",
+    "dns",
+    "email"
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
