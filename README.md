@@ -40,7 +40,7 @@ MAIL_PORT=587
 MAIL_USERNAME=SMTP_Injection
 MAIL_PASSWORD=<API_KEY>
 MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=no-reply@${APP_DOMAIN}
+MAIL_FROM_ADDRESS=no-reply@<your-domain>
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
@@ -54,4 +54,5 @@ Options:
 
 ## Notes
 
-- When publishing to Packagist, you should rely on git tags for versions. The local-path development version is set in this repo for convenience.
+- Packagist versions should be managed via git tags (e.g. v0.1.1).
+

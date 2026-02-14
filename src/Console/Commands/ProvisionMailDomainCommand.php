@@ -138,8 +138,8 @@ class ProvisionMailDomainCommand extends Command
             'MAIL_USERNAME' => 'SMTP_Injection',
             'MAIL_PASSWORD' => $apiKey,
             'MAIL_ENCRYPTION' => 'tls',
-            // phpdotenv supports variable expansion with ${...}
-            'MAIL_FROM_ADDRESS' => 'no-reply@${APP_DOMAIN}',
+            // Write a literal address; env loaders may not expand embedded variables (e.g. no-reply@${APP_DOMAIN}).
+            'MAIL_FROM_ADDRESS' => 'no-reply@'.$desiredAppDomain,
             'MAIL_FROM_NAME' => '"${APP_NAME}"',
         ]);
 
@@ -753,3 +753,4 @@ class ProvisionMailDomainCommand extends Command
         return '';
     }
 }
+
